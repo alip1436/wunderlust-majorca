@@ -1,0 +1,207 @@
+/* Alison Porter*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* global styles*/
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat );
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-family: "Montserrat", system-ui;
+    --menu-speed: 0.75s;
+}
+/* ------ body -------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    color: var(--black);
+    display: grid;
+    
+}
+
+
+/* ----- HIDDEN CONTENT STYLES ----- */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .sr-only {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+ }
+/* heading / text styles*/
+h1, h2, h3 {
+    font-family: "Molle", system-ui;
+
+}
+h4, p, q, small, nav, button, form {
+    font-family: var(--font-family);
+}
+
+
+/* header */
+header {
+    margin-top: 73px;
+    background: linear-gradient(var(--teal), var(--white));
+
+}
+#menuToggle {
+    grid-area: nav;
+    width: 100%;
+    background-color: var(--black);
+    box-shadow: 0px 3px 3px #bbb;
+    position: fixed;
+    top: 15px;
+    z-index:1;
+}
+#menuToggle input {
+    position: absolute;
+    display:flex;
+    top: 15px;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    
+}
+#menuToggle ul {
+    grid-area: hamburger;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease; 
+}
+
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    
+ 
+
+}
+nav label {
+    display: flex;
+    
+    position: relative;
+    bottom: 5px;
+    top: 25px; 
+    align-items: center;
+    justify-content: center;
+}
+nav span {
+    display: block;
+    position: relative;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+ }
+nav label div {
+    display: block;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+nav input:checked ~ ul {
+    display: flex;
+    max-height: 800px;
+    padding:1px;
+    margin-top: 50px;
+    background-color: var(--teal);
+    overflow: visible;
+}
+nav h1{
+    font-size: 2rem;;
+}
+
+/* main */
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-evenly;
+    margin-top: 500px;
+}
+#intro {
+    display: flex;
+    flex-direction: column;
+}
+/* footer */
+
+
+/* media queries */
