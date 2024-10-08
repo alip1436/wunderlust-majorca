@@ -27,7 +27,8 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: flex;
+  flex-direction: column;
 }
 body {
 	line-height: 1;
@@ -65,10 +66,12 @@ table {
 /* ------ body -------- */
 body {
     margin: 0;
-    padding: 5px;
+    padding: 0;
     background: var(--white);
     color: var(--black);
-    display: grid;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -90,24 +93,28 @@ body {
 /* heading / text styles*/
 h1, h2, h3 {
     font-family: "Molle", system-ui;
-
+    font-size: 2rem;
+    line-height: 2rem;
 }
+
 h4, p, q, small, nav, button, form {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 }
 
 
 /* header */
 header {
-    margin-top: 73px;
+    margin-top: 0;
     background: linear-gradient(var(--teal), var(--white));
+    
 
 }
 #menuToggle {
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 0;  
+    position: absolute;
+    height: 2px;
+    top: -165px;  
     z-index: 1;  
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -115,19 +122,29 @@ header {
             user-select: none;
     
   }
+#menuToggle li {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  margin:auto;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-bottom: solid 2px var(--black);
+
+
+}
   
 #menuToggle a {
     text-decoration: none;
     color: var(--black);
     font-size: 1.5rem;
     font-weight: bold;
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
     background-color: var(--teal);
- 
- 
-
   }
   
 #menuToggle a:hover, span:hover {
@@ -137,7 +154,7 @@ header {
   
   /* The hamburger button hidden inside an input element */
   #menuToggle input {
-    display: block;
+    
     width: 100%;
     height: 2px;
     user-select: none;
@@ -152,7 +169,7 @@ header {
   #menuToggle label {
     position: fixed;
     display: block;
-    width: 100%;
+    width: 325px;
     height: 75px;
     top: 15px;
     color: var(--white);
@@ -176,6 +193,7 @@ header {
     position: absolute;
     width: 100%;
   }
+
   /*
    * Hamburger checked
    */
@@ -202,37 +220,107 @@ nav input:checked ~ ul {
     position: relative;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: space-evenly;
-    gap: 20px;
+    row-gap: 10px;
     align-content: center;
     height: 300px;
-    padding:10px;
-    top: 0px;
+    padding: 0;
+    top: 230px;
+    width:320px;
     background-color: var(--teal);
     overflow: visible;
-    align-items: center;
     z-index: 1;
     border: solid 2px var(--black);
+    left: 0;
+    transform: rotate(360deg);
+    transition: all 0.5s ease 0s;
 }
 nav h1{
     font-size: 2rem;;
 }
 .head-logo {
-    z-index: 3;
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: center;
+    align-items: left;
+    padding: 10px;
+    max-width: 300px;
+    line-height: 1.4rem;
 }
-
+.head-logo a{
+  position: relative;
+ 
+}
 /* main */
 main {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-    align-content: space-evenly;
-    margin-top: 500px;
+    align-items: center;
+    
+    padding:2px;
+
 }
 #intro {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  width: 320px;
+  margin-top: 150px;
+    
+
+}
+#intro p, #intro h2 {
+  padding: 10px;
+  max-width: 300px;
+  line-height: 1.4rem;
+}
+#img-grid {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  row-gap: 5px;
+  max-width: 320px;
+}
+#img-grid picture img{
+  max-width: 320px;
+}
+
+#plan {
+  width: 320px;
+  row-gap: 10px;
+  margin-top: 10px;
+  background-color: var(--yellow);
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+#plan h3 {
+  text-align: center;
+  top: 15px;
+  position: relative;
+}
+#plan h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+#plan div {
+  margin-top: 10px;
+  padding: 2px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+}
+#plan div section {
+  background-color: var(--blue);
+  border: solid 2px var(--white) ;
 }
 /* footer */
 
