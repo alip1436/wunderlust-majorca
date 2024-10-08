@@ -295,21 +295,22 @@ main {
   row-gap: 10px;
   margin-top: 10px;
   background-color: var(--yellow);
-  padding: 10px;
+  padding: 15px;
   justify-content: center;
   align-items: center;
   
 }
 #plan h3 {
-  text-align: center;
+  text-align: left;
   top: 15px;
   position: relative;
 }
 #plan h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  padding: 10px;
 }
 #plan div {
   margin-top: 10px;
@@ -319,10 +320,137 @@ main {
   row-gap: 10px;
 }
 #plan div section {
-  background-color: var(--blue);
-  border: solid 2px var(--white) ;
+  background-color: var(--teal);
+  border: solid 5px var(--white) ;
+  border-radius: 12px;
+  align-items: center;
+  padding: 20px;
 }
-/* footer */
+#testimonials {
+  width: 320px;
+  row-gap: 10px;
+  margin-top: 10px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+#testimonials h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+#testimonials div section{
+  align-items: center;
+  padding: 20px;
+}
+#testimonials h3 {
+  text-align: left;
+  top: 15px;
+  position: relative;
+  padding: 10px;
+  max-width: 300px;
+}
+#testimonials q {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  
+}
+#about {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
+  padding: 20px;
+  justify-content: center;
+  gap: 10px;
 
+}
+#about div {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+}
+#about h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 10px;
+  max-width: 300px;
+}
+#about h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+}
+#about h4, #about p {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.4rem;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+.form-required {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-style: italic;
+}
+#contact h3 {
+  padding: 10px;
+  max-width: 300px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+  row-gap: 10px;
+  line-height: 1.4rem;
+}
+#contact input{
+  width: 250px;
+  padding: 10px;
+  border-color: var(--purple);
+}
+#contact label{
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+#contact label span{
+  color: var(--purple);
+}
+#contact fieldset span{
+  color: var(--purple);
+}
+#contact fieldset {
+  display: grid;
+  padding: 5px;
+}
+
+/* footer */
+footer {
+  display: flex;
+  align-self: center;
+  background-color: var(--light-gray);
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+  line-height: 1.4rem;
+  font-size: small;
+  align-content: center;
+}
+footer a {
+  text-decoration: none;
+}
 
 /* media queries */
