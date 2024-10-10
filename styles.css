@@ -120,7 +120,7 @@ header {
     flex-direction: column;
     position: absolute;
     height: 2px;
-    top: -165px;  
+    top: -250px;  
     z-index: 1;  
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -230,7 +230,7 @@ nav input:checked ~ ul {
     align-content: center;
     height: 300px;
     padding: 0;
-    top: 230px;
+    top: 330px;
     width:320px;
     background-color: var(--teal);
     overflow: visible;
@@ -268,6 +268,9 @@ main {
     
     padding:2px;
 
+}
+article{
+  width: 100%;
 }
 #intro {
   display: flex;
@@ -366,20 +369,29 @@ main {
   
 }
 #about {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   background-color: var(--blue);
   padding: 20px;
-  justify-content: center;
-  gap: 10px;
 
 }
 #about div {
   display: grid;
   align-content: center;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 25px;
+  width: 100%;
+  height:100%;
+
 
 }
+#about div > section{
+  padding: 10px;
+  width: 125px;
+  height: 125px;
+
+}
+
 #about h3 {
   font-size: 2rem;
   line-height: 2.5rem;
@@ -390,19 +402,19 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   padding: 10px;
+  
 }
 #about h4, #about p {
-  font-size: 1.4rem;
+  font-size: 1em;
   text-align: center;
-  line-height: 1.4rem;
+  line-height: 1em;
+  padding: 2px;
 }
-#contact {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  justify-content: center;
-  gap: 10px;
+#about img {
+  padding: 5px;
+  height: 100%;
 }
+
 .form-required {
   font-family: var(--font-family);
   font-size: 1rem;
@@ -514,33 +526,56 @@ footer a {
 @media screen and (min-width:325px){
   body {
     max-width: 1023px;
+    margin: auto;
   }
   header{
+    all:unset;
     width: 100%;
+    background: linear-gradient( var(--teal), var(--white));
   }
   nav{
+    all:unset;
 		max-width: 1023px;
 		margin: 0 auto;
 	}
 	
-	
+	#menuToggle {
+		display: grid;
+		grid-template-columns: 1fr;
+    top:110px;
+	}
+  #menuToggle ul {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    left: 1em;
+    gap: 15px;
+  }
+	#menuToggle a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    color: var(--black);
+    font-size: 1rem;
+    font-weight:800;
+    background-color: var(--white);
+  }
   .head-logo {
     top: 10px;
     margin: auto 5px;
     padding: 20px;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
   
   }
   #menuToggle label {
     position: relative;
-    display: block;
-    width: 100%;
-    height: 75px;
-    top: 15px;
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: none;
+    visibility: hidden;
+    background-color: var(--white);
   }
 }
 @media  screen and (min-width:1024px){
