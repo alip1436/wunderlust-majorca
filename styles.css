@@ -76,8 +76,7 @@ body {
     background: var(--white);
     color: var(--black);
     max-width: 320px;
-    display: flex;
-    flex-direction: column;
+    
     
 }
 
@@ -522,7 +521,9 @@ footer a {
   text-decoration: none;
 }
 
+
 /* media queries */
+
 @media screen and (min-width:325px){
   body {
     max-width: 1023px;
@@ -531,24 +532,26 @@ footer a {
   header{
     all:unset;
     width: 100%;
+    display:grid;
+    grid-template-columns: auto;
     background: linear-gradient( var(--teal), var(--white));
   }
   nav{
-    all:unset;
 		max-width: 1023px;
 		margin: 0 auto;
+    display: inherit;
 	}
 	
 	#menuToggle {
-		display: grid;
-		grid-template-columns: 1fr;
-    top:110px;
+    top:25px;
+    position: relative;
+
 	}
   #menuToggle ul {
     
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    left: 1em;
+    justify-content: center;
     gap: 15px;
   }
 	#menuToggle a {
@@ -560,23 +563,61 @@ footer a {
     font-weight:800;
     background-color: var(--white);
   }
+  #menuToggle li {
+    display: inherit;
+    padding: 10px;
+    box-shadow: 0 3px 5px var(--light-gray);
+    background-color: var(--white);
+
+  }
+  #menuToggle li:hover, #menuToggle li:focus{
+    background-color: var(--yellow);
+  }
   .head-logo {
+    display: inherit;
     top: 10px;
     margin: auto 5px;
     padding: 20px;
-    flex-direction: row;
-    flex-wrap:wrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
+    grid-template-columns: auto auto;
 
   
+  }
+  .head-logo a {
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
   #menuToggle label {
     position: relative;
     visibility: hidden;
     background-color: var(--white);
   }
+main {
+  display: grid;
+  grid-template-columns: auto;
+  width: 100%;
+  justify-content: center;
+}
+article {
+  display: inherit;
+}
+#img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 10px;
+  margin: auto;
+  width:100%;
+
+}
+#img-grid picture {
+  display:inherit;
+  grid-template-columns: 1fr;
+  width: 100%;
+
+}
+#img-grid picture img{
+  width: 100%;
+  grid-row: 2 / span 2;
 }
 @media  screen and (min-width:1024px){
   
