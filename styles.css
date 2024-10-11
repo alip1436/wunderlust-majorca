@@ -597,9 +597,11 @@ main {
   grid-template-columns: auto;
   width: 100%;
   justify-content: center;
+  margin: auto;
 }
 article {
   display: inherit;
+  padding: 20px;
 }
 #img-grid {
   display: grid;
@@ -655,6 +657,11 @@ article {
   gap: 25px;
   min-width: 321px;
   max-width: 1024px;
+}
+#about{
+  max-width: 1020px;
+  padding: 50px 50px;
+  
 }
 #about div {
   display: flex;
