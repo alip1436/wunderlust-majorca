@@ -524,7 +524,7 @@ footer a {
 
 /* media queries */
 
-@media screen and (min-width:325px){
+@media screen and (min-width:321px){
   body {
     max-width: 1023px;
     margin: auto;
@@ -537,8 +537,7 @@ footer a {
     background: linear-gradient( var(--teal), var(--white));
   }
   nav{
-		max-width: 1023px;
-		margin: 0 auto;
+		margin: auto;
     display: inherit;
 	}
 	
@@ -607,18 +606,75 @@ article {
   padding: 10px;
   margin: auto;
   width:100%;
+  height: 800px;
 
 }
 #img-grid picture {
   display:inherit;
-  grid-template-columns: 1fr;
+  grid-column: 1 / -1;
   width: 100%;
 
 }
 #img-grid picture img{
   width: 100%;
-  grid-row: 2 / span 2;
+  
+}
+#plan {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+  
+}
+#plan h3 {
+  grid-column: 1 / -1;
+  font-size: 2rem;
+}
+#plan div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 25px;
+  gap: 25px;
+}
+#testimonials {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+}
+#testimonials div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 25px;
+  gap: 25px;
+  min-width: 321px;
+  max-width: 1024px;
+}
+#about div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#about div section {
+  justify-content: center;
+}
+
+#contact h3 {
+  padding: 25px;
+}
+
 }
 @media  screen and (min-width:1024px){
-  
+  body {
+    min-width: 1024px;
+    
+  }
+  header{
+    
+    min-width: 1024px;   
+  }
 }
