@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
   flex-direction: column;
 }
 body {
-	line-height: 1;
+  box-sizing: border-box;
+	line-height: 1.35;
 }
 ol, ul {
 	list-style: none;
@@ -75,7 +76,7 @@ body {
     padding: 0;
     background: var(--white);
     color: var(--black);
-    max-width: 320px;
+    
     
     
 }
@@ -111,7 +112,7 @@ h4, p, q, small, nav, button, form {
 header {
     margin-top: 0;
     background: linear-gradient( var(--teal) 75%, var(--white));
-    max-width: 100%;
+    width: 100%;
 
 }
 #menuToggle {
@@ -263,8 +264,7 @@ main {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
     padding:2px;
 
 }
@@ -420,15 +420,16 @@ article{
   font-style: italic;
 }
 #contact h3 {
-  padding: 10px;
+  padding: 20px;
   width: 100%;
+  margin: 20px auto;
 }
 form {
   line-height: 1.4rem;
   position: relative;
-  width: 300px;
+  width: 100%;
   margin:0 auto;
-
+  padding: 25px;
 }
 
 #names input, #phone, #email{
@@ -524,9 +525,9 @@ footer a {
 
 /* media queries */
 
-@media screen and (min-width:321px){
+@media screen and (min-width:320px){
   body {
-    max-width: 1023px;
+    max-width: 920px;
     margin: auto;
   }
   header{
@@ -539,6 +540,7 @@ footer a {
   nav{
 		margin: auto;
     display: inherit;
+    max-width: 1023px;
 	}
 	
 	#menuToggle {
