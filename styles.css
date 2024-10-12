@@ -524,8 +524,9 @@ footer a {
 
 
 /* media queries */
+/*---------- MEDUIUM SCREEN STYLES ----------*/
 
-@media screen and (min-width:320px){
+@media screen and (min-width:525px){
   body {
     max-width: 920px;
     margin: auto;
@@ -677,7 +678,7 @@ article {
 }
 
 }
-@media  screen and (min-width:1024px){
+@media  screen and (min-width:920px){
   body {
     min-width: 1024px;
     
